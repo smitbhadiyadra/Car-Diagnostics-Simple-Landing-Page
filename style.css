@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Courier+Prime&family=Montserrat:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+:root{
+    /*Fonts*/
+    --Allura: 'Allura', cursive;
+    --Courier: 'Courier Prime', monospace;
+    --Montserrat: 'Montserrat', sans-serif;
+    --Orbitron: 'Orbitron', sans-serif;
+    --Poppins: 'Poppins', sans-serif;
+    --Ubuntu: 'Ubuntu', sans-serif;
+
+    /*Colors*/
+    --theme-color: #101313;
+    --side-color: #00FCC8;
+    --theme-color-another: #FFFFFF;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: var(--Montserrat);
+    font-weight: 300;
+}
+
+html,body{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    width: 0.3vw;
+    background: var(--theme-color-another);
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(var(--theme-color), var(--side-color), var(--theme-color));
+}
+
+.main{
+    width: 100vw;
+    background-color: #fff;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+    background: var(--theme-color);
+    font-size: 9px;
+    color: var(--theme-color-another);
+}
+
+header .logo{
+    margin: 6vw;
+}
+
+header nav{
+    display: flex;
+    gap: 6vw;
+    margin-right: 8vw;
+}
+
+header nav a{
+    text-decoration: none;
+    color: var(--theme-color-another);
+    text-transform: uppercase;
+    transition: .7s;
+}
+
+header nav a:hover,#active{
+    color: var(--side-color);
+}
+
+.home{
+    width: 100vw;
+    height: calc(100vh - 10vh);
+    background: var(--theme-color);
+    color: var(--theme-color-another);
+    overflow: hidden;
+}
+
+.home h2{
+    position: absolute;
+    transform: rotate(-90deg);
+    font-size: 0.9vw;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 10vh;
+    left: 4.8vw;
+}
+
+.home #hr1{
+    position: relative;
+    width: 28vw;
+    border: 0.1vh solid var(--side-color);
+    transform: rotate(-90deg);
+    left: -3.8vw;
+    top: 31vh;
+    z-index: 11;
+}
+
+.home #hr2{
+    position: relative;
+    width: 25vw;
+    border: 0.1vh solid var(--side-color);
+    transform: rotate(-90deg);
+    left: 68.7vw;
+    top: -24.2vh;
+    z-index: 11;
+}
+
+.home #hr3{
+    position: relative;
+    width: 28vw;
+    border: 0.1vh solid var(--side-color);
+    transform: rotate(-90deg);
+    left: 82vw;
+    top: -68vh;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+.home #hr4{
+    position: relative;
+    width: 28vw;
+    border: 0.1vh solid var(--side-color);
+    transform: rotate(-90deg);
+    left: 20vw;
+    top: -68vh;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+.home #hr5{
+    position: relative;
+    width: 28vw;
+    border: 0.1vh solid var(--side-color);
+    transform: rotate(-90deg);
+    left: 52vw;
+    top: -68vh;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    animation-delay: 4s;
+}
+
+.home #hr6{
+    position: relative;
+    width: 28vw;
+    border: 0.1vh solid var(--side-color);
+    transform: rotate(-90deg);
+    left: 76vw;
+    top: -68vh;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    animation-delay: 2s
+}
+
+.home #hr7{
+    position: relative;
+    width: 28vw;
+    border: 0.1vh solid var(--side-color);
+    transform: rotate(-90deg);
+    left: 26vw;
+    top: -68vh;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    animation-delay: 1s;
+}
+
+.home #hr8{
+    position: relative;
+    width: 28vw;
+    border: 0.1vh solid var(--side-color);
+    transform: rotate(-90deg);
+    left: -10vw;
+    top: -68vh;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-delay: 1.6s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+}
+
+.home #hr9{
+    position: relative;
+    width: 28vw;
+    border: 0.1vh solid var(--side-color);
+    transform: rotate(-90deg);
+    left: 5vw;
+    top: -68vh;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    animation-delay: 5s;
+}
+
+.home #hr10{
+    position: relative;
+    width: 28vw;
+    border: 0.1vh solid var(--side-color);
+    transform: rotate(-90deg);
+    left: 15vw;
+    top: -68vh;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    animation-delay: 2.5s
+}
+
+.home #hr11{
+    position: relative;
+    width: 28vw;
+    border: 0.1vh solid var(--side-color);
+    transform: rotate(-90deg);
+    left: 46vw;
+    top: -68vh;
+    animation-name: move;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    animation-delay: 3.5s;
+}
+
+@keyframes move{
+    0%{
+        opacity: 1;
+        transform: translateY(-300px) rotate(90deg);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(750px) rotate(90deg);
+    }
+}
+
+.home a h3{
+    position: absolute;
+    transform: rotate(90deg);
+    font-size: 0.9vw;
+    color: var(--theme-color-another);
+    text-decoration: none;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: -12vh;
+    left: 78.9vw;
+    transition: .5s;
+    z-index: 11;
+}
+
+.home h3:hover{
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.home i{
+    font-size: 1.8vw;
+    font-weight: 300;
+    color: var(--side-color);
+    position: absolute;
+    transform: rotate(90deg);
+    text-transform: uppercase;
+    margin-top: -4vh;
+    left: 81.1vw;
+    transition: .5s;
+    z-index: 11;
+}
+
+.home i:hover{
+    cursor: pointer;
+    font-weight: 800;
+}
+
+.home h1{
+    font-family: var(--Orbitron);
+    font-size: 4.6vw;
+    margin-left: 11vw;
+    text-transform: uppercase;
+    white-space: inherit;
+    height: 25vh;
+    letter-spacing: 0.1vw;
+}
+
+.home .photos{
+    display: flex;
+    gap: 9vw;
+    flex-wrap: wrap;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.home #img1{
+    width: 62vh;
+    height: 62vh;
+    margin-left: 9vw;
+    border-radius: 12px;
+    /* z-index: 100; */
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.home #img2{
+    width: 35vw;
+    height: 40vh;
+    margin-top: 15vh;
+    border-radius: 12px;
+    z-index: 10;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.page2{
+    background: var(--theme-color-another);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+
+.left{
+    width: 50%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.left img{
+    padding: 2vw 2vw;
+    width: 50%;
+    border-radius: 12px;
+    margin-left: 11vw;
+    filter: drop-shadow(0 0 0.5em var(--theme-color));
+}
+
+.right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 17vh;
+    margin-left: -1vw;
+}
+
+.right h1{
+    font-size: 35px;
+    width: 80%;
+    font-family: var(--Orbitron);
+    text-transform: uppercase;
+}
+
+.right h4{
+    margin-top: 4.5vh;
+    width: 60%;
+    margin-left: 3vw;
+    font-family: var(--Montserrat);
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: capitalize;
+}
+
+.right #circle1{
+    position: absolute;
+    margin-top: 19vh;
+    margin-left: 1vw;
+    display: flex;
+    align-items: center;
+}
+.right #circle2{
+    position: absolute;
+    margin-top: 28vh;
+    margin-left: 1vw;
+    display: flex;
+    align-items: center;
+}
+.right #circle3{
+    position: absolute;
+    margin-top: 37.5vh;
+    margin-left: 1vw;
+    display: flex;
+    align-items: center;
+}
+.right #circle4{
+    position: absolute;
+    margin-top: 46.8vh;
+    margin-left: 1vw;
+    display: flex;
+    align-items: center;
+}
+.right #circle5{
+    position: absolute;
+    margin-top: 55.7vh;
+    margin-left: 1vw;
+    display: flex;
+    align-items: center;
+}
+
+.page3{
+    width: 100vw;
+    height: 50vh;
+    background: var(--theme-color);
+}
+
+.text{
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text h1{
+    color: var(--theme-color-another);
+    font-family: var(--Orbitron);
+    margin-top: 8vh;
+}
+
+.content{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+}
+
+.content #box{
+    width: 22vw;
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.content span{
+    font-size: 3.5vw;
+    color: var(--side-color);
+}
+
+.content h3{
+    width: 55%;
+    text-align: center;
+    color: var(--theme-color-another);
+    font-size: 1vw;
+}
+
+.page4{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7vh;
+}
+
+.page4 h1{
+    margin-top: 7vh;
+    font-family: var(--Orbitron);
+}
+
+.page4 img{
+    width: 65%;
+}
